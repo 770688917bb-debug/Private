@@ -5,7 +5,6 @@ from flask import Flask, request
 import telebot
 from telebot import types
 
-# استبدل التوكن بتوكنك الجديد فوراً
 TOKEN = os.environ.get("BOT_TOKEN", "8792298957:AAEKfuw-GprvOn62JsE-_MPkiCVojzV34OI")
 ADMIN_ID = 8293515549
 DB_PATH = "/tmp/database.db"
@@ -82,8 +81,6 @@ def init_db():
 
     conn.commit()
     conn.close()
-
-init_db()
 
 def get_setting(key, default=""):
     init_db()
